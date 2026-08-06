@@ -1,4 +1,5 @@
 import { FeaturesHero } from "@/components/features/FeaturesHero";
+import { CostEfficiency } from "@/components/features/CostEfficiency";
 import { WhatsAppSimulator } from "@/components/pricing/WhatsAppSimulator";
 import { ProductShowcase } from "@/components/features/ProductShowcase";
 import { FeatureComparison } from "@/components/features/FeatureComparison";
@@ -12,6 +13,7 @@ export default function FeaturesPage() {
   return (
     <div className="flex flex-col w-full">
       <FeaturesHero />
+      <CostEfficiency />
       <WhatsAppSimulator />
       <ProductShowcase />
       <FeatureComparison />
