@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export function InteractivePreview() {
   return (
-    <Section className="py-24">
+    <Section className="py-24 bg-white">
       <div className="flex flex-col items-center text-center space-y-4 mb-12 max-w-3xl mx-auto">
         <AnimationWrapper animation="slideUp">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -21,7 +21,7 @@ export function InteractivePreview() {
       </div>
 
       <AnimationWrapper animation="scale" delay={0.2}>
-        <div className="w-full max-w-5xl mx-auto rounded-2xl border bg-background shadow-xl overflow-hidden">
+        <div className="w-full max-w-5xl mx-auto rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
           <div className="flex border-b bg-muted/30">
             <div className="px-6 py-3 border-r font-medium text-sm bg-background border-b-2 border-b-primary -mb-[1px]">
               Campaign Builder

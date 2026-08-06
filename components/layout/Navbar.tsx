@@ -127,7 +127,7 @@ export function Navbar() {
           </Link>
           <Link 
             href="#trial"
-            className="px-5 py-2.5 text-sm font-bold text-white bg-primary rounded-full hover:bg-primary/90 transition-all shadow-[0_4px_14px_0_rgb(217,4,41,0.39)] hover:shadow-[0_6px_20px_rgba(217,4,41,0.23)] active:scale-95"
+            className="px-5 py-2.5 text-sm font-bold text-white bg-slate-900 rounded-full hover:bg-slate-800 transition-all shadow-sm active:scale-95"
           >
             Start Free Trial
           </Link>

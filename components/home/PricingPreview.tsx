@@ -35,7 +35,7 @@ const tiers = [
 
 export function PricingPreview() {
   return (
-    <Section id="pricing" className="bg-muted/30 py-24">
+    <Section id="pricing" className="bg-slate-50 py-24 border-t border-slate-100">
       <div className="flex flex-col items-center text-center space-y-4 mb-16 max-w-3xl mx-auto">
         <AnimationWrapper animation="slideUp">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -52,7 +52,7 @@ export function PricingPreview() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {tiers.map((tier, index) => (
           <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
-            <Card className={`h-full flex flex-col relative ${tier.popular ? 'border-primary shadow-xl ring-1 ring-primary' : 'border shadow-md'}`}>
+            <Card className={`h-full flex flex-col relative bg-white ${tier.popular ? 'border-primary shadow-md ring-1 ring-primary' : 'border border-slate-200 shadow-sm'}`}>
               {tier.popular && (
                 <div className="absolute top-0 inset-x-0 transform -translate-y-1/2 flex justify-center">
                   <span className="bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">

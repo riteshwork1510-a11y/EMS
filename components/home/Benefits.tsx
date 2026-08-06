@@ -2,7 +2,7 @@
 
 import { Section } from "@/components/common/Section";
 import { AnimationWrapper } from "@/components/common/AnimationWrapper";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ShoppingCart, Clock, MessageCircle, Tag } from "lucide-react";
 import Image from "next/image";
 
 const benefits = [
@@ -15,7 +15,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <Section>
+    <Section className="bg-white">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         <AnimationWrapper animation="slideLeft" className="flex flex-col gap-6">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -34,28 +34,52 @@ export function Benefits() {
           </ul>
         </AnimationWrapper>
 
-        <AnimationWrapper animation="slideRight" className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square bg-muted rounded-3xl overflow-hidden border shadow-xl flex items-center justify-center p-8">
-           <div className="w-full h-full bg-background rounded-2xl shadow-sm border p-6 flex flex-col gap-4">
+        <AnimationWrapper animation="slideRight" className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center p-8">
+           <div className="w-full h-full bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col gap-4">
              {/* Mock workflow UI */}
-             <div className="flex items-center gap-3 border-b pb-4">
-               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                 <CheckCircle2 className="w-5 h-5 text-primary" />
+             <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+               <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
+                 <ShoppingCart className="w-5 h-5 text-slate-700" />
                </div>
                <div>
-                 <div className="h-4 w-32 bg-muted rounded mb-2" />
-                 <div className="h-3 w-24 bg-muted/50 rounded" />
+                 <h4 className="font-semibold text-slate-800 text-sm">Abandoned Cart Recovery</h4>
+                 <p className="text-xs text-slate-500">Triggered when a user leaves checkout</p>
                </div>
              </div>
-             <div className="flex-1 flex flex-col gap-3 relative">
-               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border -z-10" />
-               {[1,2,3].map((i) => (
-                 <div key={i} className="flex items-center gap-4 ml-[7px]">
-                   <div className="w-4 h-4 rounded-full bg-background border-2 border-primary z-10" />
-                   <div className="flex-1 h-12 bg-muted/30 rounded-md border flex items-center px-4">
-                     <div className="h-2 w-full max-w-[120px] bg-muted-foreground/20 rounded" />
-                   </div>
+             
+             <div className="flex-1 flex flex-col relative pt-2">
+               <div className="absolute left-[15px] top-6 bottom-6 w-[2px] bg-slate-100 -z-10" />
+               
+               <div className="flex items-start gap-4 mb-4">
+                 <div className="w-8 h-8 rounded-full bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center z-10 shrink-0 mt-1">
+                   <Clock className="w-3.5 h-3.5 text-slate-400" />
                  </div>
-               ))}
+                 <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-xl p-3">
+                   <p className="text-sm font-semibold text-slate-800">Wait 30 minutes</p>
+                   <p className="text-xs text-slate-500 mt-0.5">Delay before first message</p>
+                 </div>
+               </div>
+
+               <div className="flex items-start gap-4 mb-4">
+                 <div className="w-8 h-8 rounded-full bg-white border-2 border-slate-900 shadow-sm flex items-center justify-center z-10 shrink-0 mt-1">
+                   <MessageCircle className="w-3.5 h-3.5 text-slate-900" />
+                 </div>
+                 <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl p-3">
+                   <p className="text-sm font-semibold text-slate-800">Send WhatsApp Message</p>
+                   <p className="text-xs text-slate-600 mt-0.5 font-medium">"Hey! You left something behind..."</p>
+                 </div>
+               </div>
+
+               <div className="flex items-start gap-4">
+                 <div className="w-8 h-8 rounded-full bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center z-10 shrink-0 mt-1">
+                   <Tag className="w-3.5 h-3.5 text-slate-400" />
+                 </div>
+                 <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-xl p-3">
+                   <p className="text-sm font-semibold text-slate-800">Update CRM Tag</p>
+                   <p className="text-xs text-slate-500 mt-0.5">If purchased, tag as VIP</p>
+                 </div>
+               </div>
+
              </div>
            </div>
         </AnimationWrapper>

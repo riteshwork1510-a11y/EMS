@@ -22,10 +22,7 @@ export function ContactLayout() {
   };
 
   return (
-    <Section className="py-24 md:py-32 relative overflow-hidden bg-slate-50 min-h-[90vh]">
-      {/* Background glow effects */}
-      <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+    <Section className="py-24 md:py-32 relative overflow-hidden bg-white min-h-[90vh]">
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full mt-12 md:mt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -92,7 +89,7 @@ export function ContactLayout() {
 
           {/* Right Column: Contact Form */}
           <AnimationWrapper animation="scale" delay={0.3} className="relative w-full max-w-xl mx-auto lg:ml-auto">
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_20px_50px_rgb(0,0,0,0.06)] border border-slate-200/60 relative overflow-hidden">
+            <div className="bg-slate-50 rounded-3xl p-8 md:p-10 shadow-sm border border-slate-200 relative overflow-hidden">
               <AnimatePresence mode="wait">
                 {!isSuccess ? (
                   <motion.form 
@@ -161,7 +158,7 @@ export function ContactLayout() {
                     <button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold text-base rounded-xl px-6 py-4 mt-2 hover:bg-primary/90 transition-all shadow-[0_4px_14px_0_rgb(217,4,41,0.25)] hover:shadow-[0_6px_20px_rgba(217,4,41,0.35)] active:scale-95 disabled:opacity-70 disabled:pointer-events-none"
+                      className="w-full flex items-center justify-center gap-2 bg-slate-900 text-white font-bold text-base rounded-xl px-6 py-4 mt-2 hover:bg-slate-800 transition-all active:scale-95 disabled:opacity-70 disabled:pointer-events-none"
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
                       {!isSubmitting && <ArrowRight className="w-5 h-5" />}

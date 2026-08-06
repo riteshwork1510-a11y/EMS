@@ -26,7 +26,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <Section className="bg-primary text-primary-foreground py-24">
+    <Section className="bg-slate-900 text-white py-24">
       <div className="flex flex-col items-center text-center space-y-4 mb-16">
         <AnimationWrapper animation="slideUp">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -38,17 +38,17 @@ export function Testimonials() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
-            <div className="bg-primary-foreground/10 p-8 rounded-2xl flex flex-col h-full gap-6 backdrop-blur-sm border border-primary-foreground/20">
+            <div className="bg-slate-800 p-8 rounded-2xl flex flex-col h-full gap-6 border border-slate-700">
               <p className="text-lg leading-relaxed flex-1">
                 "{testimonial.quote}"
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary-foreground text-primary flex items-center justify-center font-bold text-xl">
+                <div className="w-12 h-12 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-xl">
                   {testimonial.avatar}
                 </div>
                 <div>
                   <div className="font-semibold">{testimonial.author}</div>
-                  <div className="text-sm text-primary-foreground/80">{testimonial.role}</div>
+                  <div className="text-sm text-slate-400">{testimonial.role}</div>
                 </div>
               </div>
             </div>

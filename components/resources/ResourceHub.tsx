@@ -85,10 +85,7 @@ export function ResourceHub() {
   });
 
   return (
-    <Section className="py-24 md:py-32 relative overflow-hidden bg-slate-50 min-h-screen">
-      {/* Premium Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
-      
+    <Section className="py-24 md:py-32 relative overflow-hidden bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
         
         {/* Hero Header */}
@@ -116,7 +113,7 @@ export function ResourceHub() {
                 placeholder="Search for articles, guides, or webinars..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border border-slate-200 rounded-2xl pl-12 pr-4 py-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-lg"
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm text-lg"
               />
             </div>
           </AnimationWrapper>
@@ -163,7 +160,7 @@ export function ResourceHub() {
                   exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   key={resource.id}
-                  className="group flex flex-col bg-white rounded-3xl border border-slate-200/60 overflow-hidden hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 cursor-pointer"
+                  className="group flex flex-col bg-white rounded-3xl border border-slate-200 overflow-hidden hover:shadow-md transition-all duration-500 cursor-pointer"
                 >
                   {/* Card Header Pattern */}
                   <div className={cn("h-32 relative overflow-hidden flex items-center justify-center", resource.bg)}>

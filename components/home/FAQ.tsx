@@ -24,7 +24,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <Section className="py-24">
+    <Section className="py-24 bg-white">
       <div className="flex flex-col items-center text-center space-y-4 mb-16 max-w-3xl mx-auto">
         <AnimationWrapper animation="slideUp">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -36,7 +36,7 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto space-y-6">
         {faqs.map((faq, index) => (
           <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
-            <div className="border rounded-xl p-6 bg-card hover:shadow-md transition-shadow">
+            <div className="border border-slate-200 rounded-xl p-6 bg-slate-50 hover:shadow-sm transition-shadow">
               <h3 className="text-xl font-semibold mb-3">{faq.question}</h3>
               <p className="text-muted-foreground">{faq.answer}</p>
             </div>

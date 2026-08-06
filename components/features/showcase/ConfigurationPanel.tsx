@@ -30,3 +30,4 @@ export function ConfigurationPanel() {
       return <CampaignsPanel />;
   }
 }
+

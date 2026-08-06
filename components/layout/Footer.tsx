@@ -7,8 +7,6 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white relative overflow-hidden">
       {/* Premium subtle background glow */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[80px] -z-10 pointer-events-none" />
       
       <div className="container mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-24">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
@@ -73,7 +71,7 @@ export function Footer() {
               />
               <button 
                 type="submit" 
-                className="bg-primary text-white font-bold text-sm rounded-xl px-4 py-3 hover:bg-primary/90 transition-all shadow-[0_4px_14px_0_rgb(217,4,41,0.2)] hover:shadow-[0_6px_20px_rgba(217,4,41,0.3)] active:scale-95"
+                className="bg-slate-900 text-white font-bold text-sm rounded-xl px-4 py-3 hover:bg-slate-800 transition-all shadow-sm active:scale-95"
               >
                 Subscribe
               </button>

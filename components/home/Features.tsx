@@ -40,7 +40,7 @@ const features = [
 
 export function Features() {
   return (
-    <Section className="bg-muted/30">
+    <Section className="bg-slate-50 border-t border-slate-100">
       <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-4 mb-16">
         <AnimationWrapper animation="slideUp">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -57,10 +57,10 @@ export function Features() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
-            <Card className="h-full border-0 shadow-md hover:shadow-lg transition-shadow bg-card/50 backdrop-blur-sm">
+            <Card className="h-full border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
               <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-slate-700" />
                 </div>
                 <CardTitle className="text-xl">{feature.title}</CardTitle>
               </CardHeader>
