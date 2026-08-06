@@ -107,7 +107,7 @@ export function AnalyticsPanel() {
           </div>
           <div className="flex justify-between items-center">
             <span className="text-slate-400">Conversion Cost</span>
-            <span className="font-bold text-emerald-400">~$0.04/msg</span>
+            <span className="font-bold text-emerald-400">~₹0.80/msg</span>
           </div>
         </div>
       </motion.div>

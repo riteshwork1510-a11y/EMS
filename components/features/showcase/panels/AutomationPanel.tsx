@@ -11,7 +11,7 @@ const workflows = [
     status: "active",
     trigger: { icon: Clock, text: "2 hours after cart abandonment" },
     action: { icon: MessageSquare, text: "Send 10% discount offer" },
-    metrics: { sent: 1240, recovered: "$4,200" }
+    metrics: { sent: 1240, recovered: "₹3,50,000" }
   },
   {
     id: 2,
