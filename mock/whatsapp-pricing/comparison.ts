@@ -1,0 +1,58 @@
+export const PRICING_COMPARISON = [
+  {
+    feature: "WhatsApp Numbers",
+    starter: "1 Number",
+    business: "2 Numbers",
+    professional: "5 Numbers",
+    enterprise: "Custom (10+)",
+  },
+  {
+    feature: "Monthly Conversations",
+    starter: "Up to 500",
+    business: "Up to 5,000",
+    professional: "Up to 50,000",
+    enterprise: "Volume discounts",
+  },
+  {
+    feature: "Broadcast Limit",
+    starter: "5,000/campaign",
+    business: "50,000/campaign",
+    professional: "Unlimited",
+    enterprise: "Unlimited",
+  },
+  {
+    feature: "Team Inbox",
+    starter: "Basic",
+    business: "Advanced (Routing)",
+    professional: "Advanced + AI",
+    enterprise: "Custom Roles",
+  },
+  {
+    feature: "Automation Builder",
+    starter: "Basic flows",
+    business: "Multi-step flows",
+    professional: "Advanced logic",
+    enterprise: "Custom solutions",
+  },
+  {
+    feature: "AI Chatbot",
+    starter: "-",
+    business: "Basic AI",
+    professional: "Advanced AI",
+    enterprise: "Custom LLMs",
+  },
+  {
+    feature: "API Access",
+    starter: "-",
+    business: "Webhooks",
+    professional: "Full REST API",
+    enterprise: "Dedicated IPs",
+  },
+  {
+    feature: "Support",
+    starter: "Email",
+    business: "Priority Chat",
+    professional: "24/7 Phone",
+    enterprise: "Dedicated Manager",
+  },
+];
