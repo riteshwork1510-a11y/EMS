@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <Section className="pt-20 md:pt-32 pb-16 overflow-hidden relative bg-white">
+    <Section className="pt-20 md:pt-32 pb-16 overflow-hidden relative bg-transparent">
 
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
         <AnimationWrapper animation="slideUp" delay={0.1}>

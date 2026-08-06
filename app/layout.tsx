@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { AnimatedGridBackground } from "@/components/layout/AnimatedGridBackground";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,7 +44,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-primary/20 selection:text-primary">
+      <body className="min-h-full flex flex-col bg-transparent text-foreground selection:bg-primary/20 selection:text-primary relative">
+        <AnimatedGridBackground />
         <Navbar />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
