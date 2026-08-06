@@ -12,11 +12,7 @@ export function Hero() {
     <Section className="pt-20 md:pt-32 pb-16 overflow-hidden relative bg-transparent">
 
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
-        <AnimationWrapper animation="slideUp" delay={0.1}>
-          <Badge variant="secondary" className="px-3 py-1 bg-primary/10 text-primary border-primary/20">
-            ✨ Introducing EasyMsgSender 2.0
-          </Badge>
-        </AnimationWrapper>
+
         
         <AnimationWrapper animation="slideUp" delay={0.2}>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground">
