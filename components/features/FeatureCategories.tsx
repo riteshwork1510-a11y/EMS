@@ -46,10 +46,10 @@ const categories = [
 
 export function FeatureCategories() {
   return (
-    <Section className="py-24 bg-background border-t">
+    <Section className="py-24 bg-slate-50 border-t border-slate-100">
       <div className="flex flex-col items-center text-center space-y-4 mb-16 max-w-3xl mx-auto">
         <AnimationWrapper animation="slideUp">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
             Deep dive into our capabilities
           </h2>
         </AnimationWrapper>
@@ -58,18 +58,18 @@ export function FeatureCategories() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category, index) => (
           <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
-            <Card className="h-full border shadow-sm hover:shadow-md transition-shadow">
+            <Card className="h-full border-slate-200 shadow-sm transition-colors hover:border-slate-300">
               <CardHeader>
-                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                  <category.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-md bg-slate-100 flex items-center justify-center mb-4 text-primary">
+                  <category.icon className="w-5 h-5" />
                 </div>
-                <CardTitle className="text-xl">{category.title}</CardTitle>
-                <CardDescription>{category.description}</CardDescription>
+                <CardTitle className="text-xl text-slate-900">{category.title}</CardTitle>
+                <CardDescription className="text-slate-500">{category.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mt-4">
                   {category.items.map((item, i) => (
-                    <li key={i} className="flex items-center text-sm text-foreground/80 before:content-[''] before:w-1.5 before:h-1.5 before:bg-primary/50 before:rounded-full before:mr-3">
+                    <li key={i} className="flex items-center text-sm text-slate-600 before:content-[''] before:w-1.5 before:h-1.5 before:bg-slate-300 before:rounded-full before:mr-3">
                       {item}
                     </li>
                   ))}

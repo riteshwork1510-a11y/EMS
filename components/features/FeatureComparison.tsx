@@ -34,52 +34,52 @@ export function FeatureComparison() {
         </div>
 
         <AnimationWrapper animation="scale" delay={0.2}>
-          <div className="bg-card border rounded-3xl shadow-xl overflow-hidden">
+          <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
             <div className="overflow-x-auto custom-scrollbar">
               <table className="w-full text-left border-collapse min-w-[600px]">
                 <thead>
-                  <tr className="bg-muted/30">
-                    <th className="p-6 font-semibold text-lg border-b w-1/3">Feature</th>
-                    <th className="p-6 font-bold text-lg text-primary border-b bg-primary/5 w-1/4">
+                  <tr>
+                    <th className="p-6 font-semibold text-sm text-slate-900 border-b border-slate-100 w-1/3">Feature</th>
+                    <th className="p-6 font-bold text-sm text-primary border-b border-slate-100 w-1/4">
                       EasyMsgSender
                     </th>
-                    <th className="p-6 font-semibold text-lg text-muted-foreground border-b w-1/4">
+                    <th className="p-6 font-semibold text-sm text-slate-500 border-b border-slate-100 w-1/4">
                       Traditional WhatsApp
                     </th>
-                    <th className="p-6 font-semibold text-lg text-muted-foreground border-b w-1/4">
+                    <th className="p-6 font-semibold text-sm text-slate-500 border-b border-slate-100 w-1/4">
                       Manual Messaging
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {features.map((feature, index) => (
-                    <tr key={index} className="hover:bg-muted/20 transition-colors group">
-                      <td className="p-6 border-b text-foreground font-medium group-hover:text-primary transition-colors">
+                    <tr key={index} className="group">
+                      <td className="p-6 border-b border-slate-50 text-slate-700 text-sm font-medium transition-colors">
                         {feature.name}
                       </td>
                       
                       {/* EMS Column */}
-                      <td className="p-6 border-b bg-primary/5">
+                      <td className="p-6 border-b border-slate-50">
                         <div className="flex items-center justify-center">
                           {typeof feature.ems === 'boolean' ? (
                             feature.ems ? (
-                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary shadow-sm">
+                              <div className="flex items-center justify-center text-primary">
                                 <Check className="w-5 h-5" />
                               </div>
                             ) : (
-                              <X className="w-5 h-5 text-muted-foreground" />
+                              <X className="w-5 h-5 text-slate-300" />
                             )
                           ) : (
-                            <span className="font-bold text-primary text-sm uppercase tracking-wider">{feature.ems}</span>
+                            <span className="font-bold text-primary text-xs uppercase tracking-wider">{feature.ems}</span>
                           )}
                         </div>
                       </td>
 
                       {/* Traditional Column */}
-                      <td className="p-6 border-b">
-                        <div className="flex items-center justify-center text-muted-foreground">
+                      <td className="p-6 border-b border-slate-50">
+                        <div className="flex items-center justify-center text-slate-500">
                           {typeof feature.traditional === 'boolean' ? (
-                            feature.traditional ? <Check className="w-5 h-5" /> : <X className="w-5 h-5 opacity-40" />
+                            feature.traditional ? <Check className="w-5 h-5" /> : <X className="w-5 h-5 text-slate-200" />
                           ) : (
                             <span className="text-sm">{feature.traditional}</span>
                           )}
@@ -87,10 +87,10 @@ export function FeatureComparison() {
                       </td>
 
                       {/* Manual Column */}
-                      <td className="p-6 border-b">
-                        <div className="flex items-center justify-center text-muted-foreground">
+                      <td className="p-6 border-b border-slate-50">
+                        <div className="flex items-center justify-center text-slate-500">
                           {typeof feature.manual === 'boolean' ? (
-                            feature.manual ? <Check className="w-5 h-5" /> : <X className="w-5 h-5 opacity-40" />
+                            feature.manual ? <Check className="w-5 h-5" /> : <X className="w-5 h-5 text-slate-200" />
                           ) : (
                             <span className="text-sm">{feature.manual}</span>
                           )}
