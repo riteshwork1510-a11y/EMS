@@ -5,12 +5,9 @@ import { AnimationWrapper } from "@/components/common/AnimationWrapper";
 
 export function FeaturesHero() {
   return (
-    <Section className="pt-12 md:pt-20 pb-16 bg-white relative overflow-hidden">
+    <Section className="pt-6 md:pt-10 pb-16 bg-white relative overflow-hidden">
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6 relative z-10">
         <AnimationWrapper animation="slideUp">
-          <div className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium text-slate-500 bg-slate-100 mb-6">
-            Powerful Platform
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
             Features designed for growth.
           </h1>

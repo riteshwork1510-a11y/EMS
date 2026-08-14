@@ -2,7 +2,6 @@
 
 import { Section } from "@/components/common/Section";
 import { AnimationWrapper } from "@/components/common/AnimationWrapper";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { MessageSquare, Zap, Shield, BarChart3, Users, Globe } from "lucide-react";
 
 const features = [
@@ -40,38 +39,38 @@ const features = [
 
 export function Features() {
   return (
-    <Section className="bg-slate-50 border-t border-slate-100">
-      <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <AnimationWrapper animation="slideUp">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Everything you need to grow
-          </h2>
-        </AnimationWrapper>
-        <AnimationWrapper animation="slideUp" delay={0.1}>
-          <p className="text-lg text-muted-foreground">
-            Powerful features designed to help you build meaningful relationships with your audience at any scale.
-          </p>
-        </AnimationWrapper>
-      </div>
+    <Section className="pb-24 overflow-hidden relative bg-white w-full pt-16">
+      <div className="container px-6 md:px-12 mx-auto max-w-[1600px]">
+        <div className="w-full">
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-5 mb-20">
+            <AnimationWrapper animation="slideUp">
+              <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900">
+                Everything you need to grow
+              </h2>
+            </AnimationWrapper>
+            <AnimationWrapper animation="slideUp" delay={0.1}>
+              <p className="text-lg text-slate-500 max-w-2xl">
+                Powerful features designed to help you build meaningful relationships with your audience at any scale.
+              </p>
+            </AnimationWrapper>
+          </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {features.map((feature, index) => (
-          <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
-            <Card className="h-full border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-slate-700" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <AnimationWrapper key={index} animation="slideUp" delay={index * 0.1}>
+                <div className="h-full bg-white rounded-[2rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.03)] p-10 hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] hover:-translate-y-1 hover:border-slate-200 transition-all duration-300 group">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300">
+                    <feature.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-4 tracking-tight">{feature.title}</h3>
+                  <p className="text-base text-slate-500 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  {feature.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </AnimationWrapper>
-        ))}
+              </AnimationWrapper>
+            ))}
+          </div>
+        </div>
       </div>
     </Section>
   );

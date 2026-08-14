@@ -85,7 +85,7 @@ export function ResourceHub() {
   });
 
   return (
-    <Section className="py-24 md:py-32 relative overflow-hidden bg-white min-h-screen">
+    <Section className="pt-6 md:pt-10 pb-24 md:pb-32 relative overflow-hidden bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
         
         {/* Hero Header */}

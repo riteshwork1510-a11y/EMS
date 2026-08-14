@@ -2,87 +2,110 @@
 
 import { Section } from "@/components/common/Section";
 import { AnimationWrapper } from "@/components/common/AnimationWrapper";
-import { CheckCircle2, ShoppingCart, Clock, MessageCircle, Tag } from "lucide-react";
-import Image from "next/image";
-
-const benefits = [
-  "Increase conversion rates by up to 35%",
-  "Automate repetitive follow-ups and save 10+ hours a week",
-  "Unify all customer communication in one inbox",
-  "Detailed A/B testing for message optimization",
-  "Seamless integration with your existing CRM",
-];
+import { Check, Clock, MessageCircle, Tag, ShoppingCart } from "lucide-react";
 
 export function Benefits() {
   return (
-    <Section className="bg-white">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-        <AnimationWrapper animation="slideLeft" className="flex flex-col gap-6">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Work smarter, not harder. Let automation do the heavy lifting.
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            EasyMsgSender is designed to streamline your workflow. Set up your campaigns once and let our intelligent routing and automation engine handle the rest.
-          </p>
-          <ul className="flex flex-col gap-4 mt-4">
-            {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-center gap-3">
-                <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
-                <span className="text-foreground font-medium">{benefit}</span>
-              </li>
-            ))}
-          </ul>
-        </AnimationWrapper>
+    <Section className="pb-24 overflow-hidden relative bg-white w-full pt-16">
+      <div className="container px-6 md:px-12 mx-auto max-w-[1600px]">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-between w-full">
+          
+          {/* Left Content */}
+          <div className="flex flex-col items-start w-full lg:w-1/2">
+            <AnimationWrapper animation="slideUp" delay={0.2}>
+              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-medium tracking-tight text-slate-900 leading-[1.1]">
+                Work smarter, not harder.<br />
+                <span className="text-slate-400">Let automation do the heavy lifting.</span>
+              </h2>
+            </AnimationWrapper>
+            
+            <AnimationWrapper animation="slideUp" delay={0.3}>
+              <p className="text-base text-slate-500 max-w-lg leading-relaxed mt-8">
+                EasyMsgSender is designed to streamline your workflow. Set up your campaigns once and let our intelligent routing and automation engine handle the rest.
+              </p>
+            </AnimationWrapper>
 
-        <AnimationWrapper animation="slideRight" className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center p-8">
-           <div className="w-full h-full bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col gap-4">
-             {/* Mock workflow UI */}
-             <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
-               <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
-                 <ShoppingCart className="w-5 h-5 text-slate-700" />
-               </div>
-               <div>
-                 <h4 className="font-semibold text-slate-800 text-sm">Abandoned Cart Recovery</h4>
-                 <p className="text-xs text-slate-500">Triggered when a user leaves checkout</p>
-               </div>
-             </div>
-             
-             <div className="flex-1 flex flex-col relative pt-2">
-               <div className="absolute left-[15px] top-6 bottom-6 w-[2px] bg-slate-100 -z-10" />
-               
-               <div className="flex items-start gap-4 mb-4">
-                 <div className="w-8 h-8 rounded-full bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center z-10 shrink-0 mt-1">
-                   <Clock className="w-3.5 h-3.5 text-slate-400" />
-                 </div>
-                 <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-xl p-3">
-                   <p className="text-sm font-semibold text-slate-800">Wait 30 minutes</p>
-                   <p className="text-xs text-slate-500 mt-0.5">Delay before first message</p>
-                 </div>
-               </div>
+            <AnimationWrapper animation="slideUp" delay={0.4} className="mt-12 w-full">
+              <div className="flex flex-col gap-6">
+                {[
+                  "Increase conversion rates by up to 35%",
+                  "Automate repetitive follow-ups and save 10+ hours a week",
+                  "Unify all customer communication in one inbox",
+                  "Detailed A/B testing for message optimization",
+                  "Seamless integration with your existing CRM"
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+                      <Check className="w-3.5 h-3.5 text-slate-700" />
+                    </div>
+                    <span className="text-base font-medium text-slate-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimationWrapper>
+          </div>
 
-               <div className="flex items-start gap-4 mb-4">
-                 <div className="w-8 h-8 rounded-full bg-white border-2 border-slate-900 shadow-sm flex items-center justify-center z-10 shrink-0 mt-1">
-                   <MessageCircle className="w-3.5 h-3.5 text-slate-900" />
-                 </div>
-                 <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl p-3">
-                   <p className="text-sm font-semibold text-slate-800">Send WhatsApp Message</p>
-                   <p className="text-xs text-slate-600 mt-0.5 font-medium">"Hey! You left something behind..."</p>
-                 </div>
-               </div>
+          {/* Right Widget - Workflow */}
+          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
+            <AnimationWrapper animation="scale" delay={0.5}>
+              <div className="relative w-full max-w-[480px] bg-white rounded-[2.5rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-10">
+                
+                {/* Decorative background element */}
+                <div className="absolute -z-10 top-8 -right-8 md:top-12 md:-right-12 w-full h-full bg-slate-50 rounded-[2.5rem]"></div>
+                
+                <div className="flex items-start gap-5 mb-10">
+                  <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-orange-500">
+                    <ShoppingCart className="w-7 h-7" />
+                  </div>
+                  <div className="flex flex-col pt-1.5">
+                    <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">Abandoned Cart Recovery</h3>
+                    <p className="text-sm text-slate-400 mt-1.5">Triggered when a user leaves checkout</p>
+                  </div>
+                </div>
 
-               <div className="flex items-start gap-4">
-                 <div className="w-8 h-8 rounded-full bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center z-10 shrink-0 mt-1">
-                   <Tag className="w-3.5 h-3.5 text-slate-400" />
-                 </div>
-                 <div className="flex-1 bg-white border border-slate-200 shadow-sm rounded-xl p-3">
-                   <p className="text-sm font-semibold text-slate-800">Update CRM Tag</p>
-                   <p className="text-xs text-slate-500 mt-0.5">If purchased, tag as VIP</p>
-                 </div>
-               </div>
+                <div className="flex flex-col gap-0 relative ml-3">
+                  {/* Connecting Line */}
+                  <div className="absolute left-6 top-10 bottom-10 w-[2px] bg-slate-100 -z-0"></div>
 
-             </div>
-           </div>
-        </AnimationWrapper>
+                  {/* Step 1 */}
+                  <div className="flex items-start gap-6 group relative z-10 mb-10 bg-white">
+                    <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center shrink-0 text-slate-500 bg-white group-hover:border-slate-300 transition-colors">
+                      <Clock className="w-5 h-5" />
+                    </div>
+                    <div className="flex flex-col flex-1 pt-2 bg-white">
+                      <span className="font-semibold text-slate-900 text-base">Wait 30 minutes</span>
+                      <span className="text-sm text-slate-400 mt-1">Delay before first message</span>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="flex items-start gap-6 group relative z-10 mb-10 bg-white">
+                    <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center shrink-0 text-slate-500 bg-white group-hover:border-slate-300 transition-colors">
+                      <MessageCircle className="w-5 h-5" />
+                    </div>
+                    <div className="flex flex-col flex-1 pt-2 bg-white">
+                      <span className="font-semibold text-slate-900 text-base">Send WhatsApp Message</span>
+                      <span className="text-sm text-slate-500 italic mt-3 bg-slate-50 p-3 rounded-xl inline-block w-max border border-slate-100">"Hey! You left something behind..."</span>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="flex items-start gap-6 group relative z-10 bg-white">
+                    <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center shrink-0 text-slate-500 bg-white group-hover:border-slate-300 transition-colors">
+                      <Tag className="w-5 h-5" />
+                    </div>
+                    <div className="flex flex-col flex-1 pt-2 bg-white">
+                      <span className="font-semibold text-slate-900 text-base">Update CRM Tag</span>
+                      <span className="text-sm text-slate-400 mt-1">If purchased, tag as VIP</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </AnimationWrapper>
+          </div>
+
+        </div>
       </div>
     </Section>
   );

@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { Plus, Search, Filter, MoreHorizontal, UserCheck, Star, Shield } from "lucide-react";
 
 const mockContacts = [
-  { id: 1, name: "Sarah Jenkins", phone: "+1 (555) 019-2834", tags: ["VIP", "Active"], lastActive: "2 mins ago" },
-  { id: 2, name: "Michael Chen", phone: "+1 (555) 837-9921", tags: ["New Lead"], lastActive: "1 hour ago" },
-  { id: 3, name: "Emma Thompson", phone: "+44 7700 900077", tags: ["Customer", "Active"], lastActive: "3 hours ago" },
-  { id: 4, name: "David Rodriguez", phone: "+1 (555) 234-5678", tags: ["Churn Risk"], lastActive: "2 days ago" },
-  { id: 5, name: "Lisa Wong", phone: "+61 491 570 156", tags: ["VIP", "Active"], lastActive: "Just now" }
+  { id: 1, name: "Aarav Sharma", phone: "+91 98765 43210", tags: ["VIP", "Active"], lastActive: "2 mins ago" },
+  { id: 2, name: "Diya Patel", phone: "+91 87654 32109", tags: ["New Lead"], lastActive: "1 hour ago" },
+  { id: 3, name: "Vihaan Singh", phone: "+91 76543 21098", tags: ["Customer", "Active"], lastActive: "3 hours ago" },
+  { id: 4, name: "Ananya Gupta", phone: "+91 65432 10987", tags: ["Churn Risk"], lastActive: "2 days ago" },
+  { id: 5, name: "Kabir Verma", phone: "+91 54321 09876", tags: ["VIP", "Active"], lastActive: "Just now" }
 ];
 
 export function ContactsPanel() {
@@ -78,13 +78,13 @@ export function ContactsPanel() {
                         {contact.name.charAt(0)}
                       </div>
                       <div className="flex flex-col">
-                        <span className="font-medium text-sm text-foreground">{contact.name}</span>
+                        <span className="font-medium text-sm text-foreground hover:text-primary cursor-pointer hover:underline transition-colors" onClick={() => console.log('Clicked', contact.name)}>{contact.name}</span>
                         <span className="text-[10px] text-muted-foreground">{contact.lastActive}</span>
                       </div>
                     </div>
                   </td>
                   <td className="px-4 py-3 text-sm text-muted-foreground">
-                    {contact.phone}
+                    <span className="hover:text-primary cursor-pointer hover:underline transition-colors" onClick={() => console.log('Dialing', contact.phone)}>{contact.phone}</span>
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex gap-1">

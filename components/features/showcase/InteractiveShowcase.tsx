@@ -4,8 +4,12 @@ import { FeatureNavigation } from "./FeatureNavigation";
 import { ConfigurationPanel } from "./ConfigurationPanel";
 import { LivePreview } from "./LivePreview";
 import { AnalyticsPanel } from "./AnalyticsPanel";
+import { useShowcaseStore } from "@/store/useShowcaseStore";
 
 export function InteractiveShowcase() {
+  const { activeFeature } = useShowcaseStore();
+  const showRightColumn = ['campaigns', 'broadcast'].includes(activeFeature);
+
   return (
     <div className="w-full max-w-7xl mx-auto rounded-3xl border bg-card shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[800px] my-12">
       
@@ -33,10 +37,12 @@ export function InteractiveShowcase() {
       </div>
 
       {/* Right Column: Live Preview & Analytics */}
-      <div className="w-full lg:w-[400px] xl:w-[450px] bg-muted/10 border-t lg:border-t-0 lg:border-l border-border/50 flex-shrink-0 flex flex-col h-full overflow-y-auto custom-scrollbar">
-        <LivePreview />
-        <AnalyticsPanel />
-      </div>
+      {showRightColumn && (
+        <div className="w-full lg:w-[400px] xl:w-[450px] bg-muted/10 border-t lg:border-t-0 lg:border-l border-border/50 flex-shrink-0 flex flex-col h-full overflow-y-auto custom-scrollbar">
+          <LivePreview />
+          <AnalyticsPanel />
+        </div>
+      )}
       
     </div>
   );

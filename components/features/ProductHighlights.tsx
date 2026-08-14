@@ -55,7 +55,8 @@ export function ProductHighlights() {
     <Section className="bg-white py-24 relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="mb-16">
+        <div className="bg-slate-50 rounded-[2.5rem] border border-slate-100 p-8 md:p-12 lg:p-16">
+          <div className="mb-16">
           <AnimationWrapper animation="slideUp">
              <span className="text-primary font-semibold tracking-wider uppercase text-xs mb-2 block">Platform Highlights</span>
              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4 max-w-2xl">
@@ -81,6 +82,7 @@ export function ProductHighlights() {
               </AnimationWrapper>
             );
           })}
+        </div>
         </div>
       </div>
     </Section>

@@ -22,9 +22,9 @@ export function ContactLayout() {
   };
 
   return (
-    <Section className="py-24 md:py-32 relative overflow-hidden bg-white min-h-[90vh]">
+    <Section className="pt-6 md:pt-10 pb-24 md:pb-32 relative overflow-hidden bg-white min-h-[90vh]">
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 w-full mt-12 md:mt-0">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Left Column: Contact Information */}

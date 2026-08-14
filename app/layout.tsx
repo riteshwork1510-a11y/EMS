@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { PageHeader } from "@/components/layout/PageHeader";
 import { Footer } from "@/components/layout/Footer";
 import { AnimatedGridBackground } from "@/components/layout/AnimatedGridBackground";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-transparent text-foreground selection:bg-primary/20 selection:text-primary relative">
         <AnimatedGridBackground />
         <Navbar />
+        <PageHeader />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
       </body>

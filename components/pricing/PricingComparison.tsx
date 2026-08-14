@@ -12,8 +12,9 @@ export function PricingComparison() {
     <Section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
         
-        <div className="text-center mb-16">
-          <AnimationWrapper animation="slideUp">
+        <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-8 md:p-12 lg:p-16">
+          <div className="text-center mb-16">
+            <AnimationWrapper animation="slideUp">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
               Compare <span className="text-primary">Plans</span>
             </h2>
@@ -60,6 +61,7 @@ export function PricingComparison() {
             ))}
           </div>
         </AnimationWrapper>
+        </div>
       </div>
     </Section>
   );

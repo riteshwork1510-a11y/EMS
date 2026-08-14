@@ -1,13 +1,11 @@
 export const showcaseData = {
   features: [
     { id: 'campaigns', title: 'Campaigns', description: 'Build & send bulk messages', icon: 'Megaphone' },
-    { id: 'broadcast', title: 'Broadcast', description: 'Real-time mass alerts', icon: 'Radio' },
     { id: 'contacts', title: 'Contacts', description: 'Manage & segment audiences', icon: 'Users' },
     { id: 'templates', title: 'Templates', description: 'Rich message templates', icon: 'LayoutTemplate' },
     { id: 'automation', title: 'Automation', description: 'Trigger-based workflows', icon: 'Workflow' },
     { id: 'inbox', title: 'Inbox', description: 'Shared team inbox', icon: 'Inbox' },
     { id: 'analytics', title: 'Analytics', description: 'Deep campaign insights', icon: 'BarChart2' },
-    { id: 'reports', title: 'Reports', description: 'Exportable data views', icon: 'FileText' },
   ],
   campaignTypes: [
     { id: 'promotional', label: 'Promotional' },
